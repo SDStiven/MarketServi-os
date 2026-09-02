@@ -9,7 +9,7 @@
  * - Login:    POST https://servidor-local-java-tgmn.onrender.com/api/auth/login
  */
 
-const AUTH_BASE_URL = 'https://servidor-local-java-tgmn.onrender.com/api/auth';
+const AUTH_BASE_URL = import.meta.env.VITE_AUTH_BASE_URL;
 
 /**
  * Escapes special HTML characters to prevent XSS attacks.
