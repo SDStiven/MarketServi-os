@@ -464,6 +464,8 @@ async function criarNovoServicoBackend(e) {
     }
     if (btnSubmit) btnSubmit.disabled = true;
 
+    console.log("Base URL do backend: ", import.meta.env.VITE_API_BASE_URL);
+
     try {
         const url = `${import.meta.env.VITE_AUTH_BASE_URL}/api/v1/servicos`;
         const payload = {
