@@ -26,7 +26,7 @@
  */
 
 // Global Constants
-const API_URL = 'https://servidor-local-java-tgmn.onrender.com/api/v1/servicos?page=0&size=5';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/v1/servicos?page=0&size=5`;
 
 // DOM Element References
 const btnCarregar = document.getElementById('btn-carregar');
@@ -301,7 +301,7 @@ function atualizarControloPaginacao(first, last, totalPages) {
  */
 async function carregarServicos(page = 0) {
     paginaAtual = page;
-    const url = `https://servidor-local-java-tgmn.onrender.com/api/v1/servicos?page=${paginaAtual}&size=${TAMANHO_PAGINA}`;
+    const url = `${import.meta.env.VITE_API_BASE_URL}/api/v1/servicos?page=${paginaAtual}&size=${TAMANHO_PAGINA}`;
 
     // Show loading state
     mostrarMensagemStatus('loading', `A carregar serviços (Página ${paginaAtual + 1})...`);
@@ -465,7 +465,7 @@ async function criarNovoServicoBackend(e) {
     if (btnSubmit) btnSubmit.disabled = true;
 
     try {
-        const url = 'https://servidor-local-java-tgmn.onrender.com/api/v1/servicos';
+        const url = `${import.meta.env.VITE_API_BASE_URL}/api/v1/servicos`;
         const payload = {
             titulo: titulo,
             descricao: descricao,

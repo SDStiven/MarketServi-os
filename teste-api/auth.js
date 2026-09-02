@@ -4,12 +4,9 @@
  * Prepared for clean integration in React + TypeScript projects
  * ============================================================================
  * 
- * Direct Database API Endpoints (Spring Boot Backend):
- * - Registar: POST https://servidor-local-java-tgmn.onrender.com/api/auth/registar
- * - Login:    POST https://servidor-local-java-tgmn.onrender.com/api/auth/login
  */
 
-const AUTH_BASE_URL = import.meta.env.VITE_AUTH_BASE_URL;
+const AUTH_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth`;
 
 /**
  * Escapes special HTML characters to prevent XSS attacks.
