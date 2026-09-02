@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar - MarketServices</title>
+    <meta name="description" content="Crie uma nova conta no MarketServices e aceda ao nosso catálogo de serviços profissionais.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+    <!-- Navbar Minimalista -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <rect x="2" y="6" width="20" height="14" rx="2"></rect>
+                    </svg>
+                </span>
+                <span class="brand-name">Market<span>Serviços</span></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#servicos" class="nav-link">Serviços</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contentor de Autenticação -->
+    <main class="auth-section">
+        <div class="auth-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="back-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Voltar ao início</span>
+                </a>
+                <h1 class="auth-title">Crie a sua conta</h1>
+                <p class="auth-subtitle">Preencha os campos abaixo para se juntar ao MarketServiços.</p>
+            </div>
+
+            <!-- Caixa de Alerta de Estado -->
+            <div id="auth-status" class="status-container" aria-live="polite"></div>
+
+            <form id="form-registar" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="username" class="form-label">Nome de Utilizador</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="ex: joaosilva"
+                            required 
+                            autocomplete="username"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Endereço de E-mail</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="ex: joao@exemplo.com"
+                            required 
+                            autocomplete="email"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Palavra-passe</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Mínimo 6 carateres" 
+                            required 
+                            autocomplete="new-password"
+                        />
+                        <button type="button" class="btn-toggle-password" id="toggle-password" aria-label="Mostrar/Esconder palavra-passe">
+                            <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn-registar-submit" class="btn btn-auth-submit">
+                    <span>Criar Conta</span>
+                    <svg class="btn-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                        <path d="M12 2a10 10 0 0 1 10 10"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Já tem uma conta? <a href="login.html" class="auth-link">Inicie sessão aqui</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-simple">
+        <div class="container">
+            <p>&copy; 2026 MarketServiços. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>

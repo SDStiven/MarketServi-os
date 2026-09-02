@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketServices - Encontre o Serviço Ideal</title>
+    <meta name="description" content="Plataforma de marketplace de serviços profissionais. Encontre os melhores especialistas e soluções para as suas necessidades.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-brand">
+                <span class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <rect x="2" y="6" width="20" height="14" rx="2"></rect>
+                    </svg>
+                </span>
+                <span class="brand-name">Market<span>Serviços</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <div class="nav-auth" id="nav-auth-container">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="registar.html" class="btn btn-primary">Registar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Plataforma Oficial de Serviços
+                </div>
+                <h1 class="hero-title">Encontre o serviço ideal para si</h1>
+                <p class="hero-subtitle">
+                    Conecte-se com os melhores profissionais e descubra soluções inovadoras para transformar as suas ideias em realidade com total segurança e eficiência.
+                </p>
+                <div class="hero-actions">
+                    <a href="#servicos" class="btn btn-hero-primary" id="btn-explorar">
+                        <span>Explorar Serviços</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <button class="btn btn-hero-secondary" id="btn-hero-carregar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6"></path>
+                            <path d="M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path>
+                        </svg>
+                        <span>Carregar Serviços</span>
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Verificado</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Suporte Ativo</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Avaliação Média</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <main class="services-section" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <div class="header-text">
+                    <span class="section-tag">Catálogo Online</span>
+                    <h2 class="section-title">Serviços disponíveis</h2>
+                    <p class="section-description">Navegue pelas opções disponíveis e escolha a oferta perfeita para o seu projeto.</p>
+                </div>
+                <div class="header-controls">
+                    <button id="btn-abrir-modal-servico" class="btn btn-primary btn-criar-servico">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Criar Serviço</span>
+                    </button>
+                    <button id="btn-carregar" class="btn btn-refresh">
+                        <svg class="refresh-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6"></path>
+                            <path d="M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path>
+                        </svg>
+                        <span>Carregar Serviços</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Area para mensagens de estado -->
+            <div id="status-mensagem" class="status-container" aria-live="polite"></div>
+
+            <!-- Grid responsivo de cards -->
+            <div id="grid-servicos" class="grid-servicos"></div>
+
+            <!-- Controlo de Paginação (3 serviços por página) -->
+            <div id="container-paginacao" class="pagination-container">
+                <button id="btn-pagina-anterior" class="btn-pagination" disabled aria-label="Página Anterior">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Anterior</span>
+                </button>
+                
+                <div id="info-paginacao" class="pagination-info">Página 1</div>
+
+                <button id="btn-pagina-seguinte" class="btn-pagination" disabled aria-label="Página Seguinte">
+                    <span>Seguinte</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Criar Serviço (Exclusivo Utilizadores Autenticados) -->
+    <div id="modal-criar-servico" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Criar Novo Serviço</h3>
+                <button id="btn-fechar-modal" class="btn-close-modal" aria-label="Fechar">&times;</button>
+            </div>
+            <form id="form-criar-servico" class="modal-body">
+                <div class="form-group">
+                    <label for="servico-titulo">Título do Serviço *</label>
+                    <input type="text" id="servico-titulo" class="form-input" placeholder="Ex: Desenvolvimento Web Frontend" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="servico-descricao">Descrição *</label>
+                    <textarea id="servico-descricao" class="form-input form-textarea" rows="3" placeholder="Descreva o serviço..." required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="servico-preco">Preço Normal (€) *</label>
+                        <input type="number" id="servico-preco" class="form-input" step="0.01" min="0" placeholder="100.00" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="servico-preco-desconto">Preço com Desconto (€)</label>
+                        <input type="number" id="servico-preco-desconto" class="form-input" step="0.01" min="0" placeholder="80.00" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="servico-imagem">URL da Imagem de Capa</label>
+                    <input type="url" id="servico-imagem" class="form-input" placeholder="https://exemplo.com/imagem.jpg" />
+                </div>
+
+                <div class="form-group form-checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="servico-ativo" checked />
+                        <span>Marcar Serviço como Ativo</span>
+                    </label>
+                </div>
+
+                <div id="modal-status-msg" class="modal-status"></div>
+
+                <div class="modal-footer">
+                    <button type="button" id="btn-cancelar-modal" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" id="btn-submeter-servico" class="btn btn-primary">Guardar na Base de Dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="brand-name">Market<span>Serviços</span></span>
+                <p>A sua plataforma de confiança para contratação de serviços de excelência.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="login.html">Login</a>
+                <a href="registar.html">Registar</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MarketServiços. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
